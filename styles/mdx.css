@@ -1,0 +1,76 @@
+.prose .anchor {
+  @apply absolute invisible no-underline;
+
+  margin-left: -1em;
+  padding-right: 0.5em;
+  width: 80%;
+  max-width: 700px;
+  cursor: pointer;
+}
+
+.anchor:hover {
+  @apply visible;
+}
+
+.prose a {
+  @apply underline-offset-2 decoration-neutral-400 dark:decoration-neutral-600 decoration-2;
+}
+
+.prose .anchor:after {
+  @apply text-neutral-300 dark:text-neutral-700;
+  content: "#";
+}
+
+.prose *:hover > .anchor {
+  @apply visible;
+}
+
+.prose img {
+  @apply m-0 rounded-2xl border;
+}
+
+.prose h2,
+.prose h3,
+.prose h4 {
+  @apply font-medium tracking-tighter !important;
+}
+
+.prose strong {
+  @apply font-medium;
+}
+
+.prose h2 {
+  @apply scroll-m-12;
+}
+
+.prose h3 {
+  @apply scroll-m-8;
+}
+
+.prose pre {
+  @apply bg-neutral-50 dark:bg-neutral-900 rounded-lg overflow-x-auto border border-neutral-200 dark:border-neutral-900;
+}
+
+.prose code {
+  @apply px-1 py-0.5 rounded-lg border font-mono font-medium text-muted-foreground;
+}
+
+.prose pre code {
+  @apply p-0;
+  border: initial;
+  line-height: 1.5;
+}
+
+.prose pre::-webkit-scrollbar {
+  display: none;
+}
+
+.prose pre {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.prose code::after,
+.prose code::before {
+  @apply hidden;
+}
